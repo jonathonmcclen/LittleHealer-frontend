@@ -1,0 +1,170 @@
+.castle {
+  background-image: url("../../assets/img/bg/001_Vampire_Castle.png");
+}
+
+.warewolf-moon {
+  background-image: url("../../assets/img/bg/002_Full_Moon.png");
+}
+
+.forrest-tree {
+  background-image: url("../../assets/img/bg/003_Forest_Tree.png");
+}
+
+.ice-world {
+  background-image: url("../../assets/img/bg/004_Ice_land.png");
+}
+
+.sand-world {
+  background-image: url("../../assets/img/bg/005_Sand_Island.png");
+}
+
+.grass-world {
+  background-image: url("../../assets/img/bg/006_Greenlands.png");
+}
+
+.old-castle {
+  background-image: url("../../assets/img/bg/007_old_castle.png");
+}
+
+.tall-rocks {
+  background-image: url("../../assets/img/bg/008_tall_stones.png");
+}
+
+.lava-world {
+  background-image: url("../../assets/img/bg/009_magma_nest.png");
+}
+
+.under-water-world {
+  background-image: url("../../assets/img/bg/010_under_the_sea.png");
+}
+
+.mountains {
+  background-image: url("../../assets/img/bg/bg_01_stoneHenge.JPG");
+}
+
+.scary-red {
+  background-image: url("../../assets/img/bg/bg_01.JPG");
+}
+
+.desert-rocks {
+  background-image: url("../../assets/img/bg/bg_02.jpg");
+}
+
+.single-tree {
+  background-image: url("../../assets/img/bg/bg_03.jpg");
+}
+
+.green-grave {
+  background-image: url("../../assets/img/bg/bg_05.jpg");
+}
+
+.cold-ruins {
+  background-image: url("../../assets/img/bg/bg_06.jpg");
+}
+
+.basic-green-2 {
+  background-image: url("../../assets/img/bg/bg_07.jpg");
+}
+
+.orange-castle {
+  background-image: url("../../assets/img/bg/bg_08.jpg");
+}
+
+.desert-skeleton {
+  background-image: url("../../assets/img/bg/bg_09.jpg");
+}
+
+.cold-cave-enterance {
+  background-image: url("../../assets/img/bg/bg_10.jpg");
+}
+
+.scary-dark {
+  background-image: url("../../assets/img/bg/bg_12.jpg");
+}
+
+.basic-green {
+  background-image: url("../../assets/img/bg/bg_13.jpg");
+}
+
+.mountains-green {
+  background-image: url("../../assets/img/bg/bg_04.jpg");
+}
+
+.blue-rocks {
+  background-image: url("../../assets/img/bg/bg_14.jpg");
+}
+
+.snow {
+  background-image: url("../../assets/img/bg/bg_15.jpg");
+}
+
+.mountains-red {
+  background-image: url("../../assets/img/bg/bg_16.jpg");
+}
+
+.blue-mountain-clearing {
+  background-image: url("../../assets/img/bg/bg_17.jpg");
+}
+
+.castle-cortyard {
+  background-image: url("../../assets/img/bg/bg_18.jpg");
+}
+
+.desert-dunes {
+  background-image: url("../../assets/img/bg/bg_19.jpg");
+}
+
+.misty-jungle {
+  background-image: url("../../assets/img/bg/bg_20.jpg");
+}
+
+.green-woods {
+  background-image: url("../../assets/img/bg/bg_21.jpg");
+}
+
+#background {
+  max-width: 800px;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 50px 30px;
+}
+
+.party {
+}
+
+.archer {
+  background-image: url("../../assets/img/characters/transparent/archer_trans.png");
+  height: 120px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.healer {
+  background-image: url("../../assets/img/characters/transparent/healer_trans.png");
+  height: 120px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#tank {
+  background-image: url("../../assets/img/characters/transparent/barbarian_trans.png");
+  height: 185px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
