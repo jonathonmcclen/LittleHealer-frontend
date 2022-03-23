@@ -8,20 +8,20 @@ import Boss from "./Boss";
 class BattleGround extends React.Component {
   render() {
     return (
-      <div className="forrest-tree" id="background">
+      <div className="tall-rocks" id="background">
         <BattleHeader />
         <div className="row" id="boss-box">
           <Boss />
         </div>
         <div className="party row">
           <div className="col-3">
-            <Dps />{" "}
+            <Dps />
           </div>
           <div className="col-6">
             <Tank />
           </div>
           <div className="col-3">
-            <Healer />{" "}
+            <Healer />
           </div>
         </div>
       </div>
