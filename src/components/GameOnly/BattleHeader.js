@@ -1,19 +1,18 @@
 import React from "react";
 
-const BattleHeader = () => {
+const BattleHeader = (props) => {
   return (
     <div id="battle-header">
-      <h2>Monster Name</h2>
+      <h2 id="bossName">{props.name}</h2>
       <div className="progress">
         <div
           className="progress-bar bg-danger"
           role="progressbar"
-          style={{ width: "88%" }}
-          aria-valuenow="88"
+          style={{ width: (props.health / props.maxHp) * 100 + "%" }}
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          88%
+          {props.health} / {props.maxHp}
         </div>
       </div>
     </div>
