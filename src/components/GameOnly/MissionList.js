@@ -5,7 +5,9 @@ class MissionList extends React.Component {
     return (
       <div>
         <h1>Misison List</h1>
-        <ul></ul>
+        <ul>
+            
+        </ul>
       </div>
     );
   }
