@@ -2,7 +2,7 @@ import React from "react";
 
 const BattleHeader = (props) => {
   return (
-    <div id="battle-header">
+    <div className="celtic-border" id="battle-header">
       <h2 id="bossName">{props.name}</h2>
       <div className="progress">
         <div
