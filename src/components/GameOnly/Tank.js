@@ -17,12 +17,9 @@ class Tank extends React.Component {
             <div id="tank"></div>
           </div>
         </div>
-
+        {true ? <div id="tauntButton" className="berzerk"></div> : <div> </div>}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>
-            {this.props.name}
-            <div id="tauntButton" className="berzerk"></div>
-          </h6>
+          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"

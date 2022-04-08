@@ -5,19 +5,19 @@ class Dps extends React.Component {
     return (
       <div id="dps-box">
         <div className="row">
-          <div className="col-1"></div>
-          <div className="col-8">
+          <div className="col-1"> </div>
+          <div className="col-10">
             <div id="dps" className="archer"></div>
           </div>
-          <div className="col-1"></div>
+          <div className="col-1"> </div>
         </div>
-
-        <div></div>
+        {true ? (
+          <div id="ultButton" className="power-bolt"></div>
+        ) : (
+          <div> </div>
+        )}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>
-            {this.props.name}
-            <div id="ultButton" className="power-bolt"></div>
-          </h6>
+          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"

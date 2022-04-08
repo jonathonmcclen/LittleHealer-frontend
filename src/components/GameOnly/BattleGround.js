@@ -112,15 +112,7 @@ class BattleGround extends React.Component {
     }
   };
 
-  healTank = () => {
-    const tankCopy = this.state.tank;
-    this.setState({
-      tank: {
-        ...tankCopy,
-        health: this.state.tank.health + this.state.healer.dmg,
-      },
-    });
-  };
+  healTank = () => {};
 
   healDps = () => {
     const tankCopy = this.state.boss;
@@ -150,17 +142,24 @@ class BattleGround extends React.Component {
 
   abillityHeal = () => {
     document.getElementById("healer").classList.add("spin");
-    console.log("Heal Button Clicked!");
-
-    const tankCopy = this.state.tank;
-    const healerCopy = this.state.healer;
-    this.setState({
-      tank: {
-        ...tankCopy,
-        health: this.state.tank.health + 50,
-      },
-      healer: { ...healerCopy, mp: this.state.healer.mp - 10 },
-    });
+    if (this.state.healer.mp - 10 >= 0) {
+      //do we have enough mp?
+      if (this.state.tank.health < this.state.tank.maxHp) {
+        //does the tank need healing?
+        const tankCopy = this.state.tank;
+        const healerCopy = this.state.healer;
+        this.setState({
+          tank: {
+            ...tankCopy,
+            health:
+              this.state.tank.health + 50 > this.state.tank.maxHp
+                ? this.state.tank.maxHp
+                : this.state.tank.health + 50,
+          },
+          healer: { ...healerCopy, mp: this.state.healer.mp - 10 },
+        });
+      }
+    }
 
     setTimeout(() => {
       document.getElementById("healer").classList.remove("spin");

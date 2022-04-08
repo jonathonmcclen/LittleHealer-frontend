@@ -6,16 +6,14 @@ class Healer extends React.Component {
       <div id="dps-box">
         <div className="row">
           <div className="col-1"></div>
-          <div className="col-8">
+          <div className="col-10">
             <div id="healer" className="healer flip-vert hover"></div>
           </div>
           <div className="col-1"></div>
         </div>
-
+        {true ? <div id="healButton" className="heal"></div> : <div> </div>}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>
-            {this.props.name} <div id="healButton" className="heal"></div>
-          </h6>
+          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
           <div className="progress">
             <div
               className="progress-bar"

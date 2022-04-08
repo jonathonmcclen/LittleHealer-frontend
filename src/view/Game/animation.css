@@ -10,38 +10,43 @@
   }
   10% {
     transform: translate(-1px, -2px);
-    filter: contrast(200%) brightness(150%);
+    filter: contrast(100%) brightness(100%) invert(100%);
   }
   20% {
     transform: translate(-3px, 0px) rotate(1deg);
+    filter: contrast(100%) brightness(100%);
   }
   30% {
     transform: translate(3px, 2px) rotate(0deg);
-    filter: contrast(200%) brightness(150%);
+    filter: contrast(200%) brightness(150%) invert(100%);
   }
   40% {
     transform: translate(1px, -1px) rotate(1deg);
+    filter: contrast(100%) brightness(100%);
   }
   50% {
     transform: translate(-1px, 2px);
-    filter: contrast(200%) brightness(150%);
+    filter: contrast(200%) brightness(150%) invert(100%);
   }
   60% {
     transform: translate(-3px, 1px) rotate(0deg);
+    filter: contrast(100%) brightness(100%);
   }
   70% {
     transform: translate(3px, 1px);
-    filter: contrast(200%) brightness(150%);
+    filter: contrast(200%) brightness(150%) invert(100%);
   }
   80% {
     transform: translate(-1px, -1px) rotate(1deg);
+    filter: contrast(100%) brightness(100%);
   }
   90% {
     transform: translate(1px, 2px) rotate(0deg);
-    filter: contrast(200%) brightness(150%);
+    filter: contrast(200%) brightness(150%) invert(100%);
   }
   100% {
     transform: translate(1px, -2px);
+    filter: contrast(100%) brightness(100%);
   }
 }
 
