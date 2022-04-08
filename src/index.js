@@ -26,7 +26,6 @@ ReactDOM.render(
           <Route path="/game" component={Game} />
         </div>
       </div>
-      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
