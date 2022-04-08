@@ -136,15 +136,15 @@ class BattleGround extends React.Component {
   };
 
   tankTurn = () => {
-    document.getElementById(`tank`).classList.add("tank-atk");
-    document.getElementById(`tank`).classList.remove("tank");
     if (this.state.tank.alive == true) {
+      document.getElementById(`tank`).classList.add("tank-atk");
+      document.getElementById(`tank`).classList.remove("tank");
       this.dealDmg("tank", "boss");
+      setTimeout(() => {
+        document.getElementById(`tank`).classList.add("tank");
+        document.getElementById(`healer`).classList.remove("tank-atk");
+      }, 500);
     }
-    setTimeout(() => {
-      document.getElementById(`tank`).classList.add("tank");
-      document.getElementById(`healer`).classList.remove("tank-atk");
-    }, 500);
   };
 
   abillityAtk = () => {
