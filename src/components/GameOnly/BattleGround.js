@@ -5,6 +5,12 @@ import Dps from "./Dps";
 import Healer from "./Healer";
 import Boss from "./Boss";
 
+//sounds
+import ClickSound from "../../assets/sounds/Bamboo_Spell_Attack_One_Shot_v2.wav";
+import Sound from "../../assets/sounds/Devil_Stab_Cast_Sword.wav";
+import Sound1 from "../../assets/sounds/Sword-Attack_Swoosh_Swipe-1C.wav";
+import Sound2 from "../../assets/sounds/ZOMBIE - Growl - Low - 01 - Humanoid Monster Voice    [003265].mp3";
+
 class BattleGround extends React.Component {
   state = {
     boss: {
@@ -32,6 +38,10 @@ class BattleGround extends React.Component {
       ultMulit: 10,
     },
     tank: { alive: true, name: "KorTak", health: 250, dmg: 5, maxHp: 250 },
+    atkSound: new Audio(ClickSound),
+    sound: new Audio(Sound),
+    sound1: new Audio(Sound1),
+    sound2: new Audio(Sound2),
   };
 
   componentDidMount() {
@@ -125,6 +135,7 @@ class BattleGround extends React.Component {
   };
 
   abillityAtk = () => {
+    this.state.atkSound.play();
     document.getElementById("dps").classList.add("jump");
     document.getElementById("boss").classList.add("hit");
     const bossCopy = this.state.boss;
@@ -146,6 +157,7 @@ class BattleGround extends React.Component {
       //do we have enough mp?
       if (this.state.tank.health < this.state.tank.maxHp) {
         //does the tank need healing?
+        this.state.sound.play();
         const tankCopy = this.state.tank;
         const healerCopy = this.state.healer;
         this.setState({
