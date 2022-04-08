@@ -1,25 +1,28 @@
 .power-bolt {
   background-image: url("../../assets/img/icons/skills/sfd_007.PNG");
-  width: 60px;
-  height: 60px;
+  width: 15px;
+  height: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
+  display: inline-block;
 }
 
 .heal {
   background-image: url("../../assets/img/icons/skills/sfd_031.png");
-  width: 60px;
-  height: 60px;
+  width: 15px;
+  height: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
+  display: inline-block;
 }
 
 .berzerk {
   background-image: url("../../assets/img/icons/skills/sfd_086.PNG");
-  width: 60px;
-  height: 60px;
+  width: 15px;
+  height: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
   vertical-align: bottom;
   display: table-cell;
+  display: inline-block;
 }

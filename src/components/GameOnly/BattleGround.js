@@ -36,16 +36,17 @@ class BattleGround extends React.Component {
 
   componentDidMount() {
     this.setFrames();
-    const healButton = document.getElementById("healButton");
+
+    const healButton = document.getElementById("healer");
     healButton.addEventListener("click", this.abillityHeal);
 
-    const tauntButton = document.getElementById("tauntButton");
+    const tauntButton = document.getElementById("tank");
     tauntButton.addEventListener("click", this.abillityTaunt);
 
     const boss = document.getElementById("boss");
     boss.addEventListener("click", this.abillityAtk);
 
-    const ultButton = document.getElementById("ultButton");
+    const ultButton = document.getElementById("dps");
     ultButton.addEventListener("click", this.abillityUlt);
   }
 
@@ -200,21 +201,21 @@ class BattleGround extends React.Component {
           <Boss />
         </div>
         <div className="party row">
-          <div className="col-3">
+          <div className="col-4">
             <Dps
               hp={this.state.dps.health}
               maxHp={this.state.dps.maxHp}
               name={this.state.dps.name}
             />
           </div>
-          <div className="col-6">
+          <div className="col-4">
             <Tank
               maxHp={this.state.tank.maxHp}
               health={this.state.tank.health}
               name={this.state.tank.name}
             />
           </div>
-          <div className="col-3">
+          <div className="col-4">
             <Healer
               hp={this.state.healer.health}
               maxHp={this.state.healer.maxHp}

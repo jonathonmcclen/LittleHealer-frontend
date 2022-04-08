@@ -12,9 +12,12 @@ class Dps extends React.Component {
           <div className="col-1"></div>
         </div>
 
-        <div id="ultButton" className="power-bolt"></div>
+        <div></div>
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
+          <h6 style={{ color: "#fff" }}>
+            {this.props.name}
+            <div id="ultButton" className="power-bolt"></div>
+          </h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"

@@ -12,9 +12,10 @@ class Healer extends React.Component {
           <div className="col-1"></div>
         </div>
 
-        <div id="healButton" className="heal"></div>
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
+          <h6 style={{ color: "#fff" }}>
+            {this.props.name} <div id="healButton" className="heal"></div>
+          </h6>
           <div className="progress">
             <div
               className="progress-bar"
