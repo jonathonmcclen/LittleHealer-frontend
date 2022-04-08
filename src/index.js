@@ -18,7 +18,6 @@ import Game from "./view/Game";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
     <Router>
       <div>
         <div id="body">
