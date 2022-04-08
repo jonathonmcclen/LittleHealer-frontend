@@ -13,6 +13,10 @@ import Sound2 from "../../assets/sounds/ZOMBIE - Growl - Low - 01 - Humanoid Mon
 
 class BattleGround extends React.Component {
   state = {
+    gmae: {
+      won: false,
+      over: false,
+    },
     boss: {
       alive: true,
       name: "Kalzgar The Lizard King",
@@ -79,83 +83,83 @@ class BattleGround extends React.Component {
     }
   };
 
+  dealDmg = (from, to) => {
+    document.getElementById(`${from}`).classList.add("jump");
+    document.getElementById(`${to}`).classList.add("hit");
+
+    const toCopy = this.state[to];
+
+    this.setState({
+      [to]: {
+        ...toCopy,
+        health: this.state[to].health - this.state[from].dmg,
+      },
+    });
+
+    if (this.state[to].health <= 0) {
+      this.setState({
+        [to]: {
+          ...toCopy,
+          alive: false,
+          health: 0,
+        },
+      });
+    }
+
+    setTimeout(() => {
+      document.getElementById(`${from}`).classList.remove("jump");
+      document.getElementById(`${to}`).classList.remove("hit");
+    }, 500);
+  };
+
   bossTurn = () => {
-    document.getElementById("boss").classList.add("jump");
-    document.getElementById("tank").classList.add("hit");
-    const tankCopy = this.state.tank;
-    this.setState({
-      tank: {
-        ...tankCopy,
-        health:
-          this.state.tank.health - this.state.boss.dmg <= 0
-            ? 0
-            : this.state.tank.health - this.state.boss.dmg,
-      },
-    });
-    setTimeout(() => {
-      document.getElementById("boss").classList.remove("jump");
-      document.getElementById("tank").classList.remove("hit");
-    }, 500);
-  };
-
-  tankTurn = () => {
-    document.getElementById("tank").classList.add("jump");
-    document.getElementById("boss").classList.add("hit");
-    const bossCopy = this.state.boss;
-    this.setState({
-      boss: {
-        ...bossCopy,
-        health: this.state.boss.health - this.state.tank.dmg,
-      },
-    });
-    setTimeout(() => {
-      document.getElementById("tank").classList.remove("jump");
-      document.getElementById("boss").classList.remove("hit");
-    }, 500);
-  };
-
-  healerTurn = () => {
-    if (this.state.tank.health < this.state.tank.maxHp) {
-      this.healTank();
-    } else if (this.state.dps.health < this.state.dps.maxHp) {
-      //heal dps
+    if (this.state.tank.alive == true) {
+      this.dealDmg("boss", "tank");
+    } else if (this.state.dps.alive == true) {
+      this.dealDmg("boss", "dps");
+    } else if (this.state.healer.alive == true) {
+      document.getElementById(`boss`).classList.add("jump");
+      document.getElementById(`healer`).classList.add("hit");
+      const toCopy = this.state.healer;
+      this.setState({
+        healer: {
+          ...toCopy,
+          alive: false,
+          health: 0,
+        },
+      });
+      setTimeout(() => {
+        document.getElementById(`boss`).classList.remove("jump");
+        document.getElementById(`healer`).classList.remove("hit");
+      }, 500);
     }
   };
 
-  healTank = () => {};
-
-  healDps = () => {
-    const tankCopy = this.state.boss;
-    this.setState({
-      tank: {
-        ...tankCopy,
-        health: this.state.tank.health + this.state.healer.dmg,
-      },
-    });
+  tankTurn = () => {
+    document.getElementById(`tank`).classList.add("tank-atk");
+    document.getElementById(`tank`).classList.remove("tank");
+    if (this.state.tank.alive == true) {
+      this.dealDmg("tank", "boss");
+    }
+    setTimeout(() => {
+      document.getElementById(`tank`).classList.add("tank");
+      document.getElementById(`healer`).classList.remove("tank-atk");
+    }, 500);
   };
 
   abillityAtk = () => {
     this.state.atkSound.play();
-    document.getElementById("dps").classList.add("jump");
-    document.getElementById("boss").classList.add("hit");
-    const bossCopy = this.state.boss;
-    this.setState({
-      boss: {
-        ...bossCopy,
-        health: this.state.boss.health - this.state.dps.dmg,
-      },
-    });
-    setTimeout(() => {
-      document.getElementById("dps").classList.remove("jump");
-      document.getElementById("boss").classList.remove("hit");
-    }, 1000);
+    this.dealDmg("dps", "boss");
   };
 
   abillityHeal = () => {
     document.getElementById("healer").classList.add("spin");
     if (this.state.healer.mp - 10 >= 0) {
       //do we have enough mp?
-      if (this.state.tank.health < this.state.tank.maxHp) {
+      if (
+        this.state.tank.health < this.state.tank.maxHp &&
+        this.state.tank.alive == true
+      ) {
         //does the tank need healing?
         this.state.sound.play();
         const tankCopy = this.state.tank;

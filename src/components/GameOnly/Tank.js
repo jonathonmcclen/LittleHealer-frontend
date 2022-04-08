@@ -14,12 +14,12 @@ class Tank extends React.Component {
       <div id="tank-box">
         <div className="row">
           <div className="col-12">
-            <div id="tank"></div>
+            <div id="tank" className="tank"></div>
           </div>
         </div>
         {true ? <div id="tauntButton" className="berzerk"></div> : <div> </div>}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
+          <h6 style={{ color: "#fff" }}>{this.props.name}&nbsp;</h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"
