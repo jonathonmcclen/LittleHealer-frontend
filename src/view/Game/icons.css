@@ -4,6 +4,7 @@
   height: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
+  vertical-align: bottom;
   display: inline-block;
 }
 
@@ -13,6 +14,7 @@
   height: 15px;
   background-repeat: no-repeat;
   background-size: 100%;
+  vertical-align: bottom;
   display: inline-block;
 }
 
