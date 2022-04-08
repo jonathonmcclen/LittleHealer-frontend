@@ -124,30 +124,26 @@
 
 #background {
   max-width: 800px;
-  height: 600px;
+  height: 660px;
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 15px;
 }
 
-.party {
-}
-
 .archer {
   background-image: url("../../assets/img/characters/transparent/archer_trans.png");
-  height: 120px;
+  height: 110px;
   width: 100%;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .healer {
   background-image: url("../../assets/img/characters/transparent/healer_trans.png");
-  height: 120px;
+  height: 110px;
   width: 100%;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
