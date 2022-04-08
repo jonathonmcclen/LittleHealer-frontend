@@ -1,6 +1,7 @@
 #boss {
   background-repeat: no-repeat;
   background-size: 100%;
+  cursor: url("../../assets/img/cursor/sword.png"), auto;
 }
 
 #boss-box {

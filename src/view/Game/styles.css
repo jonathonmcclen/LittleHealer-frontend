@@ -1,0 +1,17 @@
+.celtic-border {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 6px solid;
+  border-image: url(../../assets/img/cursor/blueCeltic.png) 12px / 12px;
+}
+
+.char-border {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 6px solid;
+  border-image: url(../../assets/img/cursor/blueCeltic.png) 12px / 12px;
+}
+
+#bossName {
+  color: white;
+}

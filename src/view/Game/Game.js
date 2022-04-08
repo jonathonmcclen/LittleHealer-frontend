@@ -5,6 +5,7 @@ import "./animation.css";
 import "./transform.css";
 import "./Enemies.css";
 import "./icons.css";
+import "./styles.css";
 
 class Game extends React.Component {
   render() {
