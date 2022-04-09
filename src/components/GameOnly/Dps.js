@@ -7,7 +7,7 @@ class Dps extends React.Component {
         <div className="row">
           <div className="col-1"> </div>
           <div className="col-10">
-            <div id="dps" className="archer"></div>
+            <div id="dps" className="dps"></div>
           </div>
           <div className="col-1"> </div>
         </div>

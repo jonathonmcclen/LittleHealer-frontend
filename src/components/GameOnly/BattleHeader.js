@@ -15,7 +15,6 @@ const BattleHeader = (props) => {
           {props.health} / {props.maxHp}
         </div>
       </div>
-      {props.health} / {props.maxHp}
     </div>
   );
 };

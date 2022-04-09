@@ -32,6 +32,7 @@ class BattleGround extends React.Component {
       dmg: 3,
       mp: 30,
       maxMp: 30,
+      cooldown: 5,
     },
     dps: {
       alive: true,
@@ -40,8 +41,16 @@ class BattleGround extends React.Component {
       maxHp: 60,
       dmg: 10,
       ultMulit: 10,
+      cooldown: 5,
     },
-    tank: { alive: true, name: "KorTak", health: 250, dmg: 5, maxHp: 250 },
+    tank: {
+      alive: true,
+      name: "KorTak",
+      health: 250,
+      dmg: 5,
+      maxHp: 250,
+      cooldown: 5,
+    },
     atkSound: new Audio(ClickSound),
     sound: new Audio(Sound),
     sound1: new Audio(Sound1),
@@ -126,6 +135,7 @@ class BattleGround extends React.Component {
           ...toCopy,
           alive: false,
           health: 0,
+          mp: 0,
         },
       });
       setTimeout(() => {
@@ -149,12 +159,19 @@ class BattleGround extends React.Component {
 
   abillityAtk = () => {
     this.state.atkSound.play();
+    document.getElementById("dps").classList.add("dps-atk");
+    document.getElementById("dps").classList.remove("dps");
     this.dealDmg("dps", "boss");
+    setTimeout(() => {
+      document.getElementById("dps").classList.remove("dps-atk");
+      document.getElementById("dps").classList.add("dps");
+    }, 1000);
   };
 
   abillityHeal = () => {
-    document.getElementById("healer").classList.add("spin");
     if (this.state.healer.mp - 10 >= 0) {
+      document.getElementById("healer").classList.add("healer-heal");
+      document.getElementById("healer").classList.remove("healer");
       //do we have enough mp?
       if (
         this.state.tank.health < this.state.tank.maxHp &&
@@ -178,7 +195,8 @@ class BattleGround extends React.Component {
     }
 
     setTimeout(() => {
-      document.getElementById("healer").classList.remove("spin");
+      document.getElementById("healer").classList.remove("healer-heal");
+      document.getElementById("healer").classList.add("healer");
     }, 1000);
   };
 
@@ -206,7 +224,7 @@ class BattleGround extends React.Component {
 
   render() {
     return (
-      <div className="tall-rocks" id="background">
+      <div className="castle" id="background">
         <BattleHeader
           health={this.state.boss.health}
           maxHp={this.state.boss.maxHp}
