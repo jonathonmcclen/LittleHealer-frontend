@@ -7,7 +7,7 @@ const GameOver = (props) => {
       {props.win ? (
         <img src={YouWin} width="100%" style={{ marginTop: "50%" }} />
       ) : (
-        <img src={GameOverImg} width="" />
+        <img src={GameOverImg} width="100%" style={{ marginTop: "50%" }} />
       )}
     </div>
   );
