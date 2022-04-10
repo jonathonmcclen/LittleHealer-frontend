@@ -1,9 +1,12 @@
 import React from "react";
+
+//components
 import BattleHeader from "./BattleHeader";
 import Tank from "./Tank";
 import Dps from "./Dps";
 import Healer from "./Healer";
 import Boss from "./Boss";
+import GameOver from "./GameOver";
 
 //sounds
 import ClickSound from "../../assets/sounds/Bamboo_Spell_Attack_One_Shot_v2.wav";
@@ -13,9 +16,9 @@ import Sound2 from "../../assets/sounds/ZOMBIE - Growl - Low - 01 - Humanoid Mon
 
 class BattleGround extends React.Component {
   state = {
-    gmae: {
-      won: false,
+    game: {
       over: false,
+      message: "You Win!",
     },
     boss: {
       alive: true,
@@ -84,7 +87,10 @@ class BattleGround extends React.Component {
   };
 
   regenMp = () => {
-    if (this.state.healer.mp < this.state.healer.maxMp) {
+    if (
+      this.state.healer.mp < this.state.healer.maxMp &&
+      this.state.healer.alive == true
+    ) {
       const healerCopy = this.state.healer;
       this.setState({
         healer: { ...healerCopy, mp: this.state.healer.mp + 1 },
@@ -95,16 +101,13 @@ class BattleGround extends React.Component {
   dealDmg = (from, to) => {
     document.getElementById(`${from}`).classList.add("jump");
     document.getElementById(`${to}`).classList.add("hit");
-
     const toCopy = this.state[to];
-
     this.setState({
       [to]: {
         ...toCopy,
         health: this.state[to].health - this.state[from].dmg,
       },
     });
-
     if (this.state[to].health <= 0) {
       this.setState({
         [to]: {
@@ -114,7 +117,6 @@ class BattleGround extends React.Component {
         },
       });
     }
-
     setTimeout(() => {
       document.getElementById(`${from}`).classList.remove("jump");
       document.getElementById(`${to}`).classList.remove("hit");
@@ -129,6 +131,7 @@ class BattleGround extends React.Component {
     } else if (this.state.healer.alive == true) {
       document.getElementById(`boss`).classList.add("jump");
       document.getElementById(`healer`).classList.add("hit");
+
       const toCopy = this.state.healer;
       this.setState({
         healer: {
@@ -138,22 +141,40 @@ class BattleGround extends React.Component {
           mp: 0,
         },
       });
+
       setTimeout(() => {
         document.getElementById(`boss`).classList.remove("jump");
         document.getElementById(`healer`).classList.remove("hit");
       }, 500);
+    } else {
+      this.setState({
+        game: {
+          message: "Game Over: Your Party Is Dead",
+          over: true,
+        },
+      });
     }
   };
 
   tankTurn = () => {
-    if (this.state.tank.alive == true) {
-      document.getElementById(`tank`).classList.add("tank-atk");
-      document.getElementById(`tank`).classList.remove("tank");
-      this.dealDmg("tank", "boss");
-      setTimeout(() => {
-        document.getElementById(`tank`).classList.add("tank");
-        document.getElementById(`healer`).classList.remove("tank-atk");
-      }, 500);
+    if (this.bossAlive()) {
+      if (this.state.tank.alive == true) {
+        document.getElementById(`tank`).classList.add("tank-atk");
+        document.getElementById(`tank`).classList.remove("tank");
+        this.dealDmg("tank", "boss");
+        setTimeout(() => {
+          document.getElementById(`tank`).classList.add("tank");
+          document.getElementById(`healer`).classList.remove("tank-atk");
+        }, 500);
+      } else {
+      }
+    } else {
+      this.setState({
+        game: {
+          message: "YOU WIN!",
+          over: true,
+        },
+      });
     }
   };
 
@@ -170,14 +191,14 @@ class BattleGround extends React.Component {
 
   abillityHeal = () => {
     if (this.state.healer.mp - 10 >= 0) {
-      document.getElementById("healer").classList.add("healer-heal");
-      document.getElementById("healer").classList.remove("healer");
       //do we have enough mp?
       if (
         this.state.tank.health < this.state.tank.maxHp &&
         this.state.tank.alive == true
       ) {
         //does the tank need healing?
+        document.getElementById("healer").classList.add("healer-heal");
+        document.getElementById("healer").classList.remove("healer");
         this.state.sound.play();
         const tankCopy = this.state.tank;
         const healerCopy = this.state.healer;
@@ -204,7 +225,19 @@ class BattleGround extends React.Component {
     console.log("Taunt Button Clicked!");
   };
 
+  bossAlive = () => {
+    if (this.state.boss.health <= 0) {
+      const toCopy = this.state.boss;
+      this.setState({
+        boss: { ...toCopy, alive: false },
+      });
+    }
+    console.log(this.state.boss.alive);
+    return this.state.boss.alive;
+  };
+
   abillityUlt = () => {
+    this.bossAlive();
     document.getElementById("dps").classList.add("spin");
     document.getElementById("boss").classList.add("hit");
     const bossCopy = this.state.boss;
@@ -224,41 +257,49 @@ class BattleGround extends React.Component {
 
   render() {
     return (
-      <div className="castle" id="background">
-        <BattleHeader
-          health={this.state.boss.health}
-          maxHp={this.state.boss.maxHp}
-          name={this.state.boss.name}
-        />
-        <div className="row" id="boss-box">
-          <Boss />
-        </div>
-        <div className="party row">
-          <div className="col-4">
-            <Dps
-              hp={this.state.dps.health}
-              maxHp={this.state.dps.maxHp}
-              name={this.state.dps.name}
+      <>
+        {this.state.game.over ? (
+          <>
+            <GameOver message={this.state.game.message} />
+          </>
+        ) : (
+          <div className="castle" id="background">
+            <BattleHeader
+              health={this.state.boss.health}
+              maxHp={this.state.boss.maxHp}
+              name={this.state.boss.name}
             />
+            <div className="row" id="boss-box">
+              <Boss />
+            </div>
+            <div className="party row">
+              <div className="col-4">
+                <Dps
+                  hp={this.state.dps.health}
+                  maxHp={this.state.dps.maxHp}
+                  name={this.state.dps.name}
+                />
+              </div>
+              <div className="col-4">
+                <Tank
+                  maxHp={this.state.tank.maxHp}
+                  health={this.state.tank.health}
+                  name={this.state.tank.name}
+                />
+              </div>
+              <div className="col-4">
+                <Healer
+                  hp={this.state.healer.health}
+                  maxHp={this.state.healer.maxHp}
+                  mp={this.state.healer.mp}
+                  maxMp={this.state.healer.maxMp}
+                  name={this.state.healer.name}
+                />
+              </div>
+            </div>
           </div>
-          <div className="col-4">
-            <Tank
-              maxHp={this.state.tank.maxHp}
-              health={this.state.tank.health}
-              name={this.state.tank.name}
-            />
-          </div>
-          <div className="col-4">
-            <Healer
-              hp={this.state.healer.health}
-              maxHp={this.state.healer.maxHp}
-              mp={this.state.healer.mp}
-              maxMp={this.state.healer.maxMp}
-              name={this.state.healer.name}
-            />
-          </div>
-        </div>
-      </div>
+        )}
+      </>
     );
   }
 }
