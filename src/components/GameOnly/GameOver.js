@@ -1,7 +1,14 @@
+import YouWin from "../../assets/img/gameScreens/YouWin.png";
+import GameOverImg from "../../assets/img/gameScreens/GameOver.png";
+
 const GameOver = (props) => {
   return (
-    <div>
-      <h1>{props.message}</h1>
+    <div id="game-over-bg">
+      {props.win ? (
+        <img src={YouWin} width="100%" style={{ marginTop: "50%" }} />
+      ) : (
+        <img src={GameOverImg} width="" />
+      )}
     </div>
   );
 };

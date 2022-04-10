@@ -18,7 +18,7 @@ class BattleGround extends React.Component {
   state = {
     game: {
       over: false,
-      message: "You Win!",
+      win: false,
     },
     boss: {
       alive: true,
@@ -62,16 +62,12 @@ class BattleGround extends React.Component {
 
   componentDidMount() {
     this.setFrames();
-
     const healButton = document.getElementById("healer");
     healButton.addEventListener("click", this.abillityHeal);
-
     const tauntButton = document.getElementById("tank");
     tauntButton.addEventListener("click", this.abillityTaunt);
-
     const boss = document.getElementById("boss");
     boss.addEventListener("click", this.abillityAtk);
-
     const ultButton = document.getElementById("dps");
     ultButton.addEventListener("click", this.abillityUlt);
   }
@@ -149,7 +145,7 @@ class BattleGround extends React.Component {
     } else {
       this.setState({
         game: {
-          message: "Game Over: Your Party Is Dead",
+          win: false,
           over: true,
         },
       });
@@ -171,7 +167,7 @@ class BattleGround extends React.Component {
     } else {
       this.setState({
         game: {
-          message: "YOU WIN!",
+          win: true,
           over: true,
         },
       });
@@ -194,7 +190,7 @@ class BattleGround extends React.Component {
       //do we have enough mp?
       if (
         this.state.tank.health < this.state.tank.maxHp &&
-        this.state.tank.alive == true
+        this.state.tank.alive
       ) {
         //does the tank need healing?
         document.getElementById("healer").classList.add("healer-heal");
@@ -205,6 +201,27 @@ class BattleGround extends React.Component {
         this.setState({
           tank: {
             ...tankCopy,
+            health:
+              this.state.tank.health + 50 > this.state.tank.maxHp
+                ? this.state.tank.maxHp
+                : this.state.tank.health + 50,
+          },
+          healer: { ...healerCopy, mp: this.state.healer.mp - 10 },
+        });
+      }
+      if (
+        this.state.dps.health < this.state.dps.maxHp &&
+        this.state.dps.alive
+      ) {
+        //does the tank need healing?
+        document.getElementById("healer").classList.add("healer-heal");
+        document.getElementById("healer").classList.remove("healer");
+        this.state.sound.play();
+        const toCopy = this.state.dps;
+        const healerCopy = this.state.healer;
+        this.setState({
+          dps: {
+            ...toCopy,
             health:
               this.state.tank.health + 50 > this.state.tank.maxHp
                 ? this.state.tank.maxHp
@@ -260,7 +277,7 @@ class BattleGround extends React.Component {
       <>
         {this.state.game.over ? (
           <>
-            <GameOver message={this.state.game.message} />
+            <GameOver win={this.state.game.win} />
           </>
         ) : (
           <div className="castle" id="background">
