@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <div className="home-bg">
         <img src={LittleHealer} width="100%" style={{ marginTop: "30%" }} />
-        <a href="/game">
+        <a href="/instructions">
           <img src={Play} width="100%" />
         </a>
       </div>

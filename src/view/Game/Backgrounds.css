@@ -131,8 +131,19 @@
   background-size: cover;
 }
 
+.dps-dead {
+  background-image: url("../../assets/img/characters/transparent/archerDead.png");
+  height: 110px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .dps {
-  background-image: url("../../assets/img/characters/transparent/archer_trans.png");
+  background-image: url("../../assets/img/characters/transparent/archerIdle.gif");
   height: 110px;
   width: 100%;
   image-rendering: pixelated;
@@ -177,6 +188,17 @@
   background-size: 100%;
 }
 
+.healer-dead {
+  background-image: url("../../assets/img/characters/transparent/healerDead.png");
+  height: 110px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .tank-atk {
   background-image: url("../../assets/img/characters/transparent/barbarian_trans.png");
   height: 130px;
@@ -190,6 +212,17 @@
 
 .tank {
   background-image: url("../../assets/img/characters/transparent/barb.gif");
+  height: 130px;
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.tank-dead {
+  background-image: url("../../assets/img/characters/transparent/barbDead.png");
   height: 130px;
   width: 100%;
   image-rendering: pixelated;

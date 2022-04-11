@@ -13,12 +13,16 @@ import ClickSound from "../../assets/sounds/Bamboo_Spell_Attack_One_Shot_v2.wav"
 import Sound from "../../assets/sounds/Devil_Stab_Cast_Sword.wav";
 import Sound1 from "../../assets/sounds/Sword-Attack_Swoosh_Swipe-1C.wav";
 import Sound2 from "../../assets/sounds/ZOMBIE - Growl - Low - 01 - Humanoid Monster Voice    [003265].mp3";
+import WinSoundEffect from "../../assets/sounds/achievment_04.mp3";
+import LooseSoundEffect from "../../assets/sounds/bomb_01.mp3";
 
 class BattleGround extends React.Component {
   state = {
     game: {
       over: false,
       win: false,
+      winSound: new Audio(WinSoundEffect),
+      loseSound: new Audio(LooseSoundEffect),
     },
     boss: {
       alive: true,
@@ -105,6 +109,8 @@ class BattleGround extends React.Component {
       },
     });
     if (this.state[to].health <= 0) {
+      document.getElementById(`${to}`).classList.remove(`${to}`);
+      document.getElementById(`${to}`).classList.add(`${to}-dead`);
       this.setState({
         [to]: {
           ...toCopy,
@@ -127,6 +133,8 @@ class BattleGround extends React.Component {
     } else if (this.state.healer.alive == true) {
       document.getElementById(`boss`).classList.add("jump");
       document.getElementById(`healer`).classList.add("hit");
+      document.getElementById(`healer`).classList.remove("healer");
+      document.getElementById(`healer`).classList.add("healer-dead");
 
       const toCopy = this.state.healer;
       this.setState({
@@ -149,6 +157,7 @@ class BattleGround extends React.Component {
           over: true,
         },
       });
+      this.state.game.looseSound.play();
     }
   };
 
@@ -171,6 +180,7 @@ class BattleGround extends React.Component {
           over: true,
         },
       });
+      this.state.game.winSound.play();
     }
   };
 
@@ -245,9 +255,12 @@ class BattleGround extends React.Component {
   bossAlive = () => {
     if (this.state.boss.health <= 0) {
       const toCopy = this.state.boss;
+      const gameCopy = this.state.game;
       this.setState({
         boss: { ...toCopy, alive: false },
+        game: { ...gameCopy, win: true, over: true },
       });
+      this.state.game.winSound.play();
     }
     console.log(this.state.boss.alive);
     return this.state.boss.alive;

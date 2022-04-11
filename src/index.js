@@ -15,6 +15,7 @@ import Header from "./components/Header";
 import Home from "./view/Home";
 import LoginRegister from "./view/LoginRegister";
 import Game from "./view/Game";
+import Instructions from "./view/Instructions";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.render(
           <Route exact path="/" component={Home} />
           <Route path="/login" component={LoginRegister} />
           <Route path="/game" component={Game} />
+          <Route path="/instructions" component={Instructions} />
         </div>
       </div>
     </Router>
