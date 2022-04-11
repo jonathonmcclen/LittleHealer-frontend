@@ -14,7 +14,7 @@ import Sound from "../../assets/sounds/Devil_Stab_Cast_Sword.wav";
 import Sound1 from "../../assets/sounds/Sword-Attack_Swoosh_Swipe-1C.wav";
 import Sound2 from "../../assets/sounds/ZOMBIE - Growl - Low - 01 - Humanoid Monster Voice    [003265].mp3";
 import WinSoundEffect from "../../assets/sounds/achievment_04.mp3";
-import LooseSoundEffect from "../../assets/sounds/bomb_01.mp3";
+import LoseSoundEffect from "../../assets/sounds/bomb_01.mp3";
 
 class BattleGround extends React.Component {
   state = {
@@ -22,7 +22,7 @@ class BattleGround extends React.Component {
       over: false,
       win: false,
       winSound: new Audio(WinSoundEffect),
-      loseSound: new Audio(LooseSoundEffect),
+      loseSound: new Audio(LoseSoundEffect),
     },
     boss: {
       alive: true,
@@ -151,13 +151,13 @@ class BattleGround extends React.Component {
         document.getElementById(`healer`).classList.remove("hit");
       }, 500);
     } else {
+      this.state.game.loseSound.play();
       this.setState({
         game: {
           win: false,
           over: true,
         },
       });
-      this.state.game.loseSound.play();
     }
   };
 
