@@ -157,7 +157,7 @@ class BattleGround extends React.Component {
           over: true,
         },
       });
-      this.state.game.looseSound.play();
+      this.state.game.loseSound.play();
     }
   };
 
