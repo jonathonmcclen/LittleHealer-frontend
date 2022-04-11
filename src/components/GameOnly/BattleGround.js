@@ -299,10 +299,10 @@ class BattleGround extends React.Component {
               maxHp={this.state.boss.maxHp}
               name={this.state.boss.name}
             />
-            <div className="row" id="boss-box">
+            <div id="boss-box" style={{ margin: "0" }}>
               <Boss />
             </div>
-            <div className="party row">
+            <div className="party row" style={{ width: "100%" }}>
               <div className="col-4">
                 <Dps
                   hp={this.state.dps.health}
