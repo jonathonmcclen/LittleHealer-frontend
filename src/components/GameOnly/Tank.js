@@ -19,19 +19,20 @@ class Tank extends React.Component {
         </div>
         {true ? <div id="tauntButton" className="berzerk"></div> : <div> </div>}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}&nbsp;</h6>
+          <h6 style={{ color: "#fff" }}>{this.props.tank.name}&nbsp;</h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"
               role="progressbar"
               style={{
-                width: (this.props.health / this.props.maxHp) * 100 + "%",
+                width:
+                  (this.props.tank.health / this.props.tank.maxHp) * 100 + "%",
               }}
               aria-valuenow="88"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              {this.props.health} / {this.props.maxHp}
+              {this.props.tank.health} / {this.props.tank.maxHp}
             </div>
           </div>
         </div>

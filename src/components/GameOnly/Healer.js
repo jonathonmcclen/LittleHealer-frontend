@@ -13,17 +13,20 @@ class Healer extends React.Component {
         </div>
         {true ? <div id="healButton" className="heal"></div> : <div> </div>}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
+          <h6 style={{ color: "#fff" }}>{this.props.healer.name}</h6>
           <div className="progress">
             <div
               className="progress-bar"
               role="progressbar"
-              style={{ width: (this.props.mp / this.props.maxMp) * 100 + "%" }}
+              style={{
+                width:
+                  (this.props.healer.mp / this.props.healer.maxMp) * 100 + "%",
+              }}
               aria-valuenow="88"
               aria-valuemin="0"
               aria-valuemax="100/100"
             >
-              {this.props.mp}/{this.props.maxMp}
+              {this.props.healer.mp}/{this.props.healer.maxMp}
             </div>
           </div>
         </div>

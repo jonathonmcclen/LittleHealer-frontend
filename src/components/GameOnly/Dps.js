@@ -17,17 +17,20 @@ class Dps extends React.Component {
           <div> </div>
         )}
         <div className="char-border">
-          <h6 style={{ color: "#fff" }}>{this.props.name}</h6>
+          <h6 style={{ color: "#fff" }}>{this.props.dps.name}</h6>
           <div className="progress">
             <div
               className="progress-bar bg-danger"
               role="progressbar"
-              style={{ width: (this.props.hp / this.props.maxHp) * 100 + "%" }}
+              style={{
+                width:
+                  (this.props.dps.health / this.props.dps.maxHp) * 100 + "%",
+              }}
               aria-valuenow="88"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              {this.props.hp}/{this.props.maxHp}
+              {this.props.dps.health}/{this.props.dps.maxHp}
             </div>
           </div>
         </div>
