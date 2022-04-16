@@ -11,12 +11,12 @@ const Instructions = () => {
           &nbsp;
           <li>
             The BOSS will attack your tank untill he is dead. Make sure to tap
-            your healer to keep them helathy.
+            your healer to keep them healthy.
           </li>
           &nbsp;
           <li>
-            If your entire party dies, you loose. If you make sure your party
-            works together you will surely be victorious!
+            If your entire party dies, you lose. If you make sure your party
+            works together, you will surely be victorious!
           </li>
         </ol>
         <a href="/game">
