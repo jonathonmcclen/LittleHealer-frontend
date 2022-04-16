@@ -150,14 +150,16 @@ class BattleGround extends React.Component {
         document.getElementById(`boss`).classList.remove("jump");
         document.getElementById(`healer`).classList.remove("hit");
       }, 500);
-    } else {
-      this.state.game.loseSound.play();
-      this.setState({
-        game: {
-          win: false,
-          over: true,
-        },
-      });
+
+      setTimeout(() => {
+        this.state.game.loseSound.play();
+        this.setState({
+          game: {
+            win: false,
+            over: true,
+          },
+        });
+      }, 500);
     }
   };
 
@@ -262,7 +264,6 @@ class BattleGround extends React.Component {
       });
       this.state.game.winSound.play();
     }
-    console.log(this.state.boss.alive);
     return this.state.boss.alive;
   };
 
@@ -302,29 +303,16 @@ class BattleGround extends React.Component {
             <div id="boss-box" style={{ margin: "0" }}>
               <Boss />
             </div>
+
             <div className="party row" style={{ width: "100%" }}>
               <div className="col-4">
-                <Dps
-                  hp={this.state.dps.health}
-                  maxHp={this.state.dps.maxHp}
-                  name={this.state.dps.name}
-                />
+                <Dps dps={this.state.dps} />
               </div>
               <div className="col-4">
-                <Tank
-                  maxHp={this.state.tank.maxHp}
-                  health={this.state.tank.health}
-                  name={this.state.tank.name}
-                />
+                <Tank tank={this.state.tank} />
               </div>
               <div className="col-4">
-                <Healer
-                  hp={this.state.healer.health}
-                  maxHp={this.state.healer.maxHp}
-                  mp={this.state.healer.mp}
-                  maxMp={this.state.healer.maxMp}
-                  name={this.state.healer.name}
-                />
+                <Healer healer={this.state.healer} />
               </div>
             </div>
           </div>
