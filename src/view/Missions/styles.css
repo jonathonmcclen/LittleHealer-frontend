@@ -1,0 +1,23 @@
+.mission-card {
+    background-image: url("../../assets/img/btns/missionBox.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 120px;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.mission-preview-img {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100px;
+}
+
+.bg {
+    background-image: url("../../assets/img/gameScreens/menueBg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 670px;
+    padding: 10px;
+    background-attachment: fixed;
+}
