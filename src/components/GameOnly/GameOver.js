@@ -8,14 +8,14 @@ const GameOver = (props) => {
       {props.win ? (
         <>
           <img src={YouWin} width="100%" style={{ marginTop: "30%" }} />
-          <a href="/game">
+          <a href="/missions/0">
             <img src={PlayAgain} width="100%" />
           </a>
         </>
       ) : (
         <>
           <img src={GameOverImg} width="100%" style={{ marginTop: "30%" }} />
-          <a href="/game">
+          <a href="/missions/0">
             <img src={PlayAgain} width="100%" />
           </a>
         </>

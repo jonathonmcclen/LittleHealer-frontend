@@ -4,19 +4,22 @@ import BossCard from "../../components/GameOnly/BossCard";
 
 import "./styles.css";
 
-const Bosses = () => {
+const Bosses = (props) => {
   const { Missions } = useSelector((store) => store.missionsStore);
-  const { Loading } = useSelector((store) => store.missionsStore.Loading);
 
   return (
     <>
       {Missions.length > 0 && (
         <div className="bg" style={{ width: "100%" }}>
-          {Missions[0].bosses.map((boss) => (
+          {Missions[props.match.params.mission_id].bosses.map((boss) => (
             <BossCard
               bossName={boss.name}
               hp={boss.health}
               attack={boss.attack_power}
+              bossId={boss.id}
+              mission_id={props.match.params.mission_id}
+              bg={boss.bg}
+              css={boss.css_class}
             />
           ))}
         </div>

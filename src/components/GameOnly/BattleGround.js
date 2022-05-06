@@ -25,11 +25,10 @@ class BattleGround extends React.Component {
       loseSound: new Audio(LoseSoundEffect),
     },
     boss: {
+      ...this.props.boss,
       alive: true,
-      name: "Kalzgar The Lizard King",
-      health: 10000,
-      dmg: 20,
-      maxHp: 10000,
+      maxHp: this.props.boss.health,
+      dmg: this.props.boss.attack_power,
     },
     healer: {
       alive: true,
@@ -294,28 +293,31 @@ class BattleGround extends React.Component {
             <GameOver win={this.state.game.win} />
           </>
         ) : (
-          <div className="castle" id="background">
-            <BattleHeader
-              health={this.state.boss.health}
-              maxHp={this.state.boss.maxHp}
-              name={this.state.boss.name}
-            />
-            <div id="boss-box" style={{ margin: "0" }}>
-              <Boss />
-            </div>
-
-            <div className="party row" style={{ width: "100%" }}>
-              <div className="col-4">
-                <Dps dps={this.state.dps} />
-              </div>
-              <div className="col-4">
-                <Tank tank={this.state.tank} />
-              </div>
-              <div className="col-4">
-                <Healer healer={this.state.healer} />
+          <>
+            <div className={this.state.boss.bg} id="background">
+              <BattleHeader
+                health={this.state.boss.health}
+                maxHp={this.state.boss.maxHp}
+                name={this.state.boss.name}
+              />
+              <div id="boss-box" style={{ margin: "0" }}>
+                <Boss css={this.props.boss.css_class} />
               </div>
             </div>
-          </div>
+            <div>
+              <div className="party row red-brick">
+                <div className="col-4">
+                  <Dps dps={this.state.dps} />
+                </div>
+                <div className="col-4">
+                  <Tank tank={this.state.tank} />
+                </div>
+                <div className="col-4">
+                  <Healer healer={this.state.healer} />
+                </div>
+              </div>
+            </div>
+          </>
         )}
       </>
     );

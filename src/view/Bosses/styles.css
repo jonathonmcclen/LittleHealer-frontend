@@ -6,3 +6,8 @@
 .boss-title {
     font-size: 3vw;
 }
+
+.boss-preview{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

@@ -8,9 +8,9 @@ export const Missions = () => {
   const { Missions } = useSelector((store) => store.missionsStore);
 
   return (
-    <div className="bg" style={{ width: "100%" }}>
+    <div className="bg" style={{ width: "100%", height: "100%" }}>
       {Missions.map((mission) => (
-        <MissionCard bossName={mission.name} />
+        <MissionCard mission={mission} />
       ))}
     </div>
   );

@@ -4,9 +4,10 @@ import Play from "../../assets/img/gameScreens/Play.png";
 const Instructions = () => {
   return (
     <>
-      <div id="game-over-bg">
+      <div className="bg">
         <img src={LittleHealer} width="100%" />
         <ol style={{ color: "#fcba03" }}>
+          <li>Select a boss to fight</li>&nbsp;
           <li>Tap the BOSS to attack them with arrows</li>
           &nbsp;
           <li>
@@ -19,7 +20,7 @@ const Instructions = () => {
             works together, you will surely be victorious!
           </li>
         </ol>
-        <a href="/game">
+        <a href="/missions">
           <img src={Play} width="100%" />
         </a>
       </div>

@@ -4,10 +4,6 @@
   cursor: url("../../assets/img/cursor/sword.png"), auto;
 }
 
-#boss-box {
-  height: 300px;
-}
-
 .lizzard-king {
   background-image: url("../../assets/img/Enemies/lizardArmy/10.png");
   width: 350px;
@@ -81,71 +77,71 @@
 .wolf {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/01.png");
   width: 250px;
-  margin-top: 130px;
-  height: 500px;
+  margin-top: 10px;
+  height: 400px;
 }
 
 .thunder-bore {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/02.png");
-  width: 280px;
-  margin-top: 80px;
-  height: 500px;
+  width: 260px;
+  margin-top: 6px;
+  height: 400px;
 }
 
 .crecent-wild-cat {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/03.png");
   width: 150px;
-  margin-top: 250px;
-  height: 500px;
+  margin-top: 50px;
+  height: 150px;
 }
 
 .mistic-mountains-ram {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/04.png");
-  width: 280px;
-  margin-top: 90px;
+  width: 200px;
+  margin-top: 40px;
   height: 500px;
 }
 
 .kackle {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/05.png");
-  width: 300px;
+  width: 230px;
   margin-top: 50px;
   height: 500px;
 }
 
 .theo-saber-cat {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/06.png");
-  width: 360px;
-  margin-top: 0px;
+  width: 300px;
+  margin-top: -40px;
   height: 500px;
 }
 
 .silver-back {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/07.png");
-  width: 300px;
-  margin-top: 80px;
+  width: 230px;
+  margin-top: 20px;
   height: 500px;
 }
 
 .ferdinand {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/08.png");
-  width: 280px;
-  margin-top: 60px;
+  width: 200px;
+  margin-top: 50px;
   height: 500px;
 }
 
 .kodiack {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/09.png");
-  width: 350px;
-  margin-top: 0px;
+  width: 230px;
+  margin-top: 20px;
   height: 500px;
 }
 
 .ivory-tusk {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/10.png");
-  width: 500px;
-  margin-top: -200px;
-  height: 800px;
+  width: 300px;
+  margin-top: 10px;
+  height: 400px;
 }
 
 .tok {

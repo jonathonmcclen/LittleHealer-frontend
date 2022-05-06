@@ -1,6 +1,6 @@
 import PlayBtn from "../../assets/img/btns/playbtn.png";
 
-const MissionCard = ({ bossName, hp, attack }) => {
+const MissionCard = ({ mission }) => {
   return (
     <>
       <div className="mission-card col-12">
@@ -9,16 +9,16 @@ const MissionCard = ({ bossName, hp, attack }) => {
             <div className="mission-preview-img"></div>
           </div>
           <div className="col-5">
-            <h5>{bossName}</h5>
+            <h5>{mission.name}</h5>
             <p>
-              <strong>HP:</strong> {hp}
+              <strong>HP:</strong>
             </p>
             <p>
-              <strong>ATK:</strong> {attack}
+              <strong>ATK:</strong>
             </p>
           </div>
           <div className="col-3">
-            <a href="/game">
+            <a href={`/missions/${mission.id - 1}`}>
               <img src={PlayBtn} width="100%" />
             </a>
           </div>
