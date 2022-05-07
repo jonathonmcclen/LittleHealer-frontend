@@ -4,6 +4,8 @@
   cursor: url("../../assets/img/cursor/sword.png"), auto;
 }
 
+/* --------------------Lizard Army---------------------*/
+
 .lizzard-king {
   background-image: url("../../assets/img/Enemies/lizardArmy/10.png");
   width: 350px;
@@ -73,6 +75,8 @@
   margin-top: 200px;
   height: 500px;
 }
+
+/*----------------------Hunting------------------------*/
 
 .wolf {
   background-image: url("../../assets/img/Enemies/FantacyAnimals/01.png");
@@ -144,6 +148,8 @@
   height: 400px;
 }
 
+/*------------------Shadow Army------------------*/
+
 .tok {
   background-image: url("../../assets/img/Enemies/shadowMonsters/01.png");
   width: 180px;
@@ -209,6 +215,78 @@
 
 .cave-king {
   background-image: url("../../assets/img/Enemies/shadowMonsters/10.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+/*-------------------------Human Army--------------------------*/
+
+.human-warrior{
+  background-image: url("../../assets/img/Enemies/HumanArmy/01.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-archer{
+  background-image: url("../../assets/img/Enemies/HumanArmy/02.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-flail-knight{
+  background-image: url("../../assets/img/Enemies/HumanArmy/03.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-crossbow{
+  background-image: url("../../assets/img/Enemies/HumanArmy/04.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-monk{
+  background-image: url("../../assets/img/Enemies/HumanArmy/05.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-pike-knight{
+  background-image: url("../../assets/img/Enemies/HumanArmy/06.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-wizzard{
+  background-image: url("../../assets/img/Enemies/HumanArmy/07.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-exalted-knight{
+  background-image: url("../../assets/img/Enemies/HumanArmy/08.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-balista{
+  background-image: url("../../assets/img/Enemies/HumanArmy/09.png");
+  width: 500px;
+  margin-top: -200px;
+  height: 800px;
+}
+
+.human-mounted-knight{
+  background-image: url("../../assets/img/Enemies/HumanArmy/10.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
