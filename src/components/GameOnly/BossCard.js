@@ -23,7 +23,7 @@ const MissionCard = ({ mission_id, bossId, bossName, hp, attack, bg, css }) => {
             <p className="stat">
               <strong>ATK:</strong> {attack}
             </p>
-            <a href={`/play/${mission_id}/${bossId - 1}`}>
+            <a href={`/play/${mission_id}/${bossId}`}>
               <img src={PlayBtn} width="100%" />
             </a>
           </div>

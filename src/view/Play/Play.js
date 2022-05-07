@@ -19,11 +19,13 @@ const Play = (props) => {
         <>
           <div id="battle-ground">
             <BattleGround
-              boss={
-                Missions[props.match.params.mission_id].bosses[
-                  props.match.params.boss_id
-                ]
-              }
+              boss={Missions[props.match.params.mission_id].bosses.find(
+                (element) => {
+                  if (element.id == props.match.params.boss_id) {
+                    return element;
+                  }
+                }
+              )}
             />
           </div>
         </>
