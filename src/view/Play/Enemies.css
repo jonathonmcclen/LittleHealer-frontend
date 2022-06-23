@@ -1,76 +1,76 @@
 #boss {
   background-repeat: no-repeat;
   background-size: 100%;
-  cursor: url("../../assets/img/cursor/sword.png"), auto;
+  cursor: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/cursor/sword.png"), auto;
 }
 
 /* --------------------Lizard Army---------------------*/
 
 .lizzard-king {
-  background-image: url("../../assets/img/Enemies/lizardArmy/10.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/10.png");
   width: 350px;
   margin-top: 0px;
   height: 500px;
 }
 
 .mounted-lizard-exicutioner {
-  background-image: url("../../assets/img/Enemies/lizardArmy/09.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/09.png");
   width: 350px;
   margin-top: 90px;
   height: 500px;
 }
 
 .killer-claw {
-  background-image: url("../../assets/img/Enemies/lizardArmy/08.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/08.png");
   width: 300px;
   margin-top: 30px;
   height: 500px;
 }
 
 .wild-spine-horn {
-  background-image: url("../../assets/img/Enemies/lizardArmy/07.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/07.png");
   width: 300px;
   margin-top: 120px;
   height: 500px;
 }
 
 .lizzard-knight {
-  background-image: url("../../assets/img/Enemies/lizardArmy/06.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/06.png");
   width: 300px;
   margin-top: 100px;
   height: 500px;
 }
 
 .lizzard-mage {
-  background-image: url("../../assets/img/Enemies/lizardArmy/05.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/05.png");
   width: 280px;
   margin-top: 160px;
   height: 500px;
 }
 
 .eel-queen {
-  background-image: url("../../assets/img/Enemies/lizardArmy/04.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/04.png");
   width: 280px;
   margin-top: 160px;
   height: 500px;
 }
 
 .lizzard-archer {
-  background-image: url("../../assets/img/Enemies/lizardArmy/03.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/03.png");
   width: 280px;
   margin-top: 160px;
   height: 500px;
 }
 
 .grarp {
-  background-image: url("../../assets/img/Enemies/lizardArmy/02.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/02.png");
   width: 240px;
   margin-top: 200px;
   height: 500px;
 }
 
 .gulper {
-  background-image: url("../../assets/img/Enemies/lizardArmy/01.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/lizardArmy/01.png");
   width: 240px;
   margin-top: 200px;
   height: 500px;
@@ -79,70 +79,70 @@
 /*----------------------Hunting------------------------*/
 
 .wolf {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/01.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/01.png");
   width: 250px;
   margin-top: 10px;
   height: 400px;
 }
 
 .thunder-bore {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/02.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/02.png");
   width: 260px;
   margin-top: 6px;
   height: 400px;
 }
 
 .crecent-wild-cat {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/03.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/03.png");
   width: 150px;
   margin-top: 50px;
   height: 150px;
 }
 
 .mistic-mountains-ram {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/04.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/04.png");
   width: 200px;
   margin-top: 40px;
   height: 500px;
 }
 
 .kackle {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/05.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/05.png");
   width: 230px;
   margin-top: 50px;
   height: 500px;
 }
 
 .theo-saber-cat {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/06.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/06.png");
   width: 300px;
   margin-top: -40px;
   height: 500px;
 }
 
 .silver-back {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/07.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/07.png");
   width: 230px;
   margin-top: 20px;
   height: 500px;
 }
 
 .ferdinand {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/08.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/08.png");
   width: 200px;
   margin-top: 50px;
   height: 500px;
 }
 
 .kodiack {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/09.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/09.png");
   width: 230px;
   margin-top: 20px;
   height: 500px;
 }
 
 .ivory-tusk {
-  background-image: url("../../assets/img/Enemies/FantacyAnimals/10.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/FantacyAnimals/10.png");
   width: 300px;
   margin-top: 10px;
   height: 400px;
@@ -151,70 +151,70 @@
 /*------------------Shadow Army------------------*/
 
 .tok {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/01.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/01.png");
   width: 180px;
   margin-top: 200px;
   height: 500px;
 }
 
 .shadow-elf-assassin {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/02.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/02.png");
   width: 200px;
   margin-top: 180px;
   height: 500px;
 }
 
 .ruin-sentinal {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/03.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/03.png");
   width: 300px;
   margin-top: 50px;
   height: 500px;
 }
 
 .cave-crawler {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/04.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/04.png");
   width: 380px;
   margin-top: -50px;
   height: 500px;
 }
 
 .shadow-elf-squire {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/05.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/05.png");
   width: 250px;
   margin-top: 100px;
   height: 500px;
 }
 
 .cave-witch {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/06.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/06.png");
   width: 300px;
   margin-top: 20px;
   height: 500px;
 }
 
 .cave-worm {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/07.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/07.png");
   width: 300px;
   margin-top: 80px;
   height: 500px;
 }
 
 .abomination {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/08.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/08.png");
   width: 280px;
   margin-top: 60px;
   height: 500px;
 }
 
 .mounted-shadow-elf {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/09.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/09.png");
   width: 350px;
   margin-top: 0px;
   height: 500px;
 }
 
 .cave-king {
-  background-image: url("../../assets/img/Enemies/shadowMonsters/10.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/shadowMonsters/10.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
@@ -223,70 +223,70 @@
 /*-------------------------Human Army--------------------------*/
 
 .human-warrior{
-  background-image: url("../../assets/img/Enemies/HumanArmy/01.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/01.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-archer{
-  background-image: url("../../assets/img/Enemies/HumanArmy/02.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/02.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-flail-knight{
-  background-image: url("../../assets/img/Enemies/HumanArmy/03.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/03.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-crossbow{
-  background-image: url("../../assets/img/Enemies/HumanArmy/04.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/04.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-monk{
-  background-image: url("../../assets/img/Enemies/HumanArmy/05.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/05.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-pike-knight{
-  background-image: url("../../assets/img/Enemies/HumanArmy/06.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/06.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-wizzard{
-  background-image: url("../../assets/img/Enemies/HumanArmy/07.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/07.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-exalted-knight{
-  background-image: url("../../assets/img/Enemies/HumanArmy/08.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/08.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-balista{
-  background-image: url("../../assets/img/Enemies/HumanArmy/09.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/09.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;
 }
 
 .human-mounted-knight{
-  background-image: url("../../assets/img/Enemies/HumanArmy/10.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/Enemies/HumanArmy/10.png");
   width: 500px;
   margin-top: -200px;
   height: 800px;

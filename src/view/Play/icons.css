@@ -1,5 +1,5 @@
 .power-bolt {
-  background-image: url("../../assets/img/icons/skills/sfd_007.PNG");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/icons/skills/sfd_007.PNG");
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 }
 
 .heal {
-  background-image: url("../../assets/img/icons/skills/sfd_031.png");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/icons/skills/sfd_031.png");
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 }
 
 .berzerk {
-  background-image: url("../../assets/img/icons/skills/sfd_086.PNG");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/icons/skills/sfd_086.PNG");
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
