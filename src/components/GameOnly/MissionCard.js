@@ -1,5 +1,3 @@
-import PlayBtn from "../../assets/img/btns/playbtn.png";
-
 const MissionCard = ({ mission }) => {
   return (
     <>
@@ -19,7 +17,7 @@ const MissionCard = ({ mission }) => {
           </div>
           <div className="col-3">
             <a href={`/missions/${mission.id - 1}`}>
-              <img src={PlayBtn} width="100%" />
+              <div className="play" width="100%"></div>
             </a>
           </div>
         </div>

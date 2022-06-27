@@ -1,22 +1,26 @@
-import YouWin from "../../assets/img/gameScreens/YouWin.png";
-import GameOverImg from "../../assets/img/gameScreens/GameOver.png";
-import PlayAgain from "../../assets/img/gameScreens/playAgain.png";
-
 const GameOver = (props) => {
   return (
     <div id="game-over-bg">
       {props.win ? (
         <>
-          <img src={YouWin} width="100%" style={{ marginTop: "30%" }} />
+          <div
+            className="you-win"
+            width="100%"
+            style={{ marginTop: "30%" }}
+          ></div>
           <a href="/missions/0">
-            <img src={PlayAgain} width="100%" />
+            <div className="play-again" width="100%"></div>
           </a>
         </>
       ) : (
         <>
-          <img src={GameOverImg} width="100%" style={{ marginTop: "30%" }} />
+          <div
+            className="game-over"
+            width="100%"
+            style={{ marginTop: "30%" }}
+          ></div>
           <a href="/missions/0">
-            <img src={PlayAgain} width="100%" />
+            <div className="play-again" width="100%"></div>
           </a>
         </>
       )}

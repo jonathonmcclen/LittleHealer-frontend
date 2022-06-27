@@ -1,5 +1,3 @@
-import PlayBtn from "../../assets/img/btns/playbtn.png";
-
 const MissionCard = ({ mission_id, bossId, bossName, hp, attack, bg, css }) => {
   return (
     <>
@@ -24,7 +22,7 @@ const MissionCard = ({ mission_id, bossId, bossName, hp, attack, bg, css }) => {
               <strong>ATK:</strong> {attack}
             </p>
             <a href={`/play/${mission_id}/${bossId}`}>
-              <img src={PlayBtn} width="100%" />
+              <div className="play" width="100%"></div>
             </a>
           </div>
         </div>

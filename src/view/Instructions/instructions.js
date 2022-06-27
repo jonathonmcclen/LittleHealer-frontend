@@ -1,11 +1,8 @@
-import LittleHealer from "../../assets/img/gameScreens/LittleHealer.png";
-import Play from "../../assets/img/gameScreens/Play.png";
-
 const Instructions = () => {
   return (
     <>
       <div className="bg">
-        <img src={LittleHealer} width="100%" />
+        <div className="littlehealer-logo" width="100%"></div>
         <ol style={{ color: "#fcba03" }}>
           <li>Select a boss to fight</li>&nbsp;
           <li>Tap the BOSS to attack them with arrows</li>
@@ -21,7 +18,7 @@ const Instructions = () => {
           </li>
         </ol>
         <a href="/missions">
-          <img src={Play} width="100%" />
+          <div className="play" width="100%"></div>
         </a>
       </div>
     </>

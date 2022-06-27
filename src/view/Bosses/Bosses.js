@@ -9,6 +9,11 @@ const Bosses = (props) => {
 
   return (
     <>
+      <div className="row">
+        <h1>
+          <a href="/missions">{"<"}</a>
+        </h1>
+      </div>
       {Missions.length > 0 && (
         <div className="bg" style={{ width: "100%" }}>
           {Missions[props.match.params.mission_id].bosses.map((boss) => (

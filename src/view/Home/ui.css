@@ -1,0 +1,29 @@
+.play {
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/Play.png");
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.littlehealer-logo {
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/LittleHealer.png");
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.you-win {
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/YouWin.png");
+}
+
+.game_over {
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/GameOver.png");
+}
+
+.play-again {
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/playAgain.png");
+}

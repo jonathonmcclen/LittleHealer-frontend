@@ -91,7 +91,7 @@ code {
 }
 
 .home-bg {
-  background-image: url("assets/img/gameScreens/SwordBg.jpeg");
+  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/SwordBg.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100vh;

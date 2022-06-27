@@ -1,14 +1,21 @@
 import React from "react";
-import Play from "../../assets/img/gameScreens/Play.png";
-import LittleHealer from "../../assets/img/gameScreens/LittleHealer.png";
+import "./ui.css";
 
 class Home extends React.Component {
   render() {
     return (
       <div className="home-bg">
-        <img src={LittleHealer} width="100%" style={{ marginTop: "30%" }} />
+        <div className="row">
+          <div className="col-1"> </div>
+          <div className="col-10">
+            <div className="littlehealer-logo" width="100%"></div>{" "}
+          </div>
+          <div className="col-1"> </div>
+        </div>
         <a href="/instructions">
-          <img src={Play} width="100%" />
+          <div className="play" width="100px">
+            {" "}
+          </div>
         </a>
       </div>
     );
