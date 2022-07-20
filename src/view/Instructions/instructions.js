@@ -1,9 +1,9 @@
 const Instructions = () => {
   return (
     <>
-      <div className="bg">
+      <div className="bg" style={{ minHeight: "100vh" }}>
         <div className="littlehealer-logo" width="100%"></div>
-        <ol style={{ color: "#fcba03" }}>
+        <ol style={{ color: "#fcba03", fontSize: "20px" }}>
           <li>Select a boss to fight</li>&nbsp;
           <li>Tap the BOSS to attack them with arrows</li>
           &nbsp;

@@ -1,1 +1,1 @@
-export const Missions = "http://localhost:3000/missions";
+export const Missions = "https://little-healer-api.herokuapp.com/missions";

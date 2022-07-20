@@ -1,8 +1,10 @@
 .play {
     background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/Play.png");
     width: 100%;
+    max-width: 100%;
     margin-top: 10px;
-    height: 200px;
+    min-height: 50px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -10,6 +12,7 @@
 .littlehealer-logo {
     background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/LittleHealer.png");
     width: 100%;
+    max-width: 100%;
     margin-top: 10px;
     height: 200px;
     background-repeat: no-repeat;
@@ -18,12 +21,28 @@
 
 .you-win {
     background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/YouWin.png");
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.game_over {
+.game-over {
     background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/GameOver.png");
-}
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;}
 
 .play-again {
     background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/playAgain.png");
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    min-height: 75px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

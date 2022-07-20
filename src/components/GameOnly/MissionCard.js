@@ -2,7 +2,7 @@ const MissionCard = ({ mission }) => {
   return (
     <>
       <div className="mission-card col-12">
-        <div className="row">
+        <div className="row" height="100%">
           <div className="col-4">
             <div className="mission-preview-img"></div>
           </div>

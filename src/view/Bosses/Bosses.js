@@ -9,13 +9,16 @@ const Bosses = (props) => {
 
   return (
     <>
-      <div className="row">
-        <h1>
-          <a href="/missions">{"<"}</a>
-        </h1>
-      </div>
       {Missions.length > 0 && (
         <div className="bg" style={{ width: "100%" }}>
+          <h2>
+            <a
+              href="/missions"
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              {"< Missions"}
+            </a>
+          </h2>
           {Missions[props.match.params.mission_id].bosses.map((boss) => (
             <BossCard
               bossName={boss.name}

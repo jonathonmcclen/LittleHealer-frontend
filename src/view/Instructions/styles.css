@@ -15,9 +15,8 @@
 }
 
 .bg {
-    background-image: url("../../assets/img/gameScreens/menueBg.png");
+    background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/menueBg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 10px;
-    background-attachment: fixed;
+    height: 100vh;
 }
