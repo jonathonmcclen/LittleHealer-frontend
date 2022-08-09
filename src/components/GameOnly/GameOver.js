@@ -1,3 +1,6 @@
+// import 'Background.css'
+import '../../view/Play/Backgrounds.css';
+
 const GameOver = (props) => {
   return (
     <div id="game-over-bg">
@@ -6,18 +9,18 @@ const GameOver = (props) => {
           <div className="you-win" width="100px"></div>
           <a href="/missions">
             <div className="play-again" width="100px">
-              {" "}
+              {' '}
             </div>
           </a>
         </>
       ) : (
         <>
           <div className="game-over" width="100px">
-            {" "}
+            {' '}
           </div>
           <a href="/missions">
             <div className="play-again" width="100px">
-              {" "}
+              {' '}
             </div>
           </a>
         </>
