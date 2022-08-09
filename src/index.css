@@ -1,14 +1,19 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -49,10 +54,13 @@ code {
 }
 
 #body {
-  min-height: 75vh;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   font-size: calc(10px + 2vmin);
 }
 
@@ -89,10 +97,29 @@ code {
   margin: 0px;
   padding: 12px;
 }
+.screen {
+  position: relative;
+  height: 30rem;
+}
 
 .home-bg {
-  background-image: url("https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/SwordBg.jpeg");
+  background-image: url('https://esc-room-games.s3.us-west-1.amazonaws.com/LittleHealer/img/gameScreens/SwordBg.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 100vh;
+  background-position: center;
+  border-radius: 0 0 2.4rem 2.4rem;
+  height: 100%;
+  overflow: hidden;
 }
+
+/* .bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  height: 47.7rem;
+  width: 100%;
+  border-radius: 0 0 2.4rem 2.4rem;
+  overflow: hidden;
+} */

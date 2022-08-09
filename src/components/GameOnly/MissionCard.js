@@ -8,12 +8,9 @@ const MissionCard = ({ mission }) => {
           </div>
           <div className="col-5">
             <h5>{mission.name}</h5>
-            <p>
-              <strong>HP:</strong>
-            </p>
-            <p>
-              <strong>ATK:</strong>
-            </p>
+            <strong>HP:</strong>
+            <br />
+            <strong>ATK:</strong>
           </div>
           <div className="col-3">
             <a href={`/missions/${mission.id - 1}`}>

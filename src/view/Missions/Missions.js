@@ -9,7 +9,7 @@ export const Missions = () => {
 
   return (
     <>
-      <div className="bg" style={{ width: "100%", height: "100%" }}>
+      <div className="bg">
         {Missions.map((mission) => (
           <MissionCard mission={mission} />
         ))}

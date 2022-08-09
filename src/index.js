@@ -1,17 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./devices.min.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './devices.min.css';
 
 // css and styles
-import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Provider } from "react-redux";
-import store from "./redux";
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import store from './redux';
 
-import App from "./app";
-import TopBar from "./assets/img/PhoneTopBar.jpg";
+import App from './app';
+import TopBar from './assets/img/PhoneTopBar.jpg';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,11 +33,12 @@ ReactDOM.render(
             <div class="shadow shadow--bl"></div>
           </div>
           <div class="inner-shadow"></div>
-          <div class="screen" style={{ overflow: "scroll" }}>
+          <div class="screen">
             <img
               src={TopBar}
+              alt="top-bar"
               height="48px"
-            style={{ position: "sticky", zIndex: "-0", top: "-1 px" }}
+              style={{ position: 'absolute', zIndex: '1', top: '-1 px' }}
             />
             <App />
           </div>
@@ -45,5 +46,5 @@ ReactDOM.render(
       </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
