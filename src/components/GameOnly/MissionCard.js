@@ -6,11 +6,11 @@ const MissionCard = ({ mission }) => {
           <div className="col-4">
             <div className="mission-preview-img"></div>
           </div>
-          <div className="col-5">
-            <h5>{mission.name}</h5>
-            <strong>HP:</strong>
-            <br />
-            <strong>ATK:</strong>
+          <div className="col-5" style={{display: 'flex', flexDirection: 'column'}}>
+            <span style={{fontSize: '20px'}}>{mission.name}</span>
+            <span style={{fontSize: '15px'}}>HP:</span>
+            
+            <span style={{fontSize: '15px'}}>ATK:</span>
           </div>
           <div className="col-3">
             <a href={`/missions/${mission.id - 1}`}>
